@@ -18,4 +18,10 @@ class AppColors {
   static const pendingBg = Color(0xFFF5EEDD);
   static const rejected = Color(0xFF8B3A2B);
   static const rejectedBg = Color(0xFFF5E6E3);
+
+  // Dark surfaces (owner drawer header, subscription card)
+  static const inkStart = Color(0xFF1C1B19);
+  static const inkEnd = Color(0xFF3A362F);
+  static const onInkMuted = Color(0xFFB9AE9F);
+  static const avatarBg = Color(0xFFEFE5D8);
 }

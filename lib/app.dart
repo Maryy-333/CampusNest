@@ -8,8 +8,9 @@ import 'screens/admin/admin_dashboard_screen.dart';
 import 'screens/auth/complete_profile_screen.dart';
 import 'screens/auth/role_selection_screen.dart';
 import 'screens/auth/verify_email_screen.dart';
+import 'screens/owner/owner_dashboard_screen.dart';
 import 'screens/splash_screen.dart';
-import 'screens/student/student_shell.dart';
+import 'screens/resident/resident_shell.dart';
 import 'services/auth_service.dart';
 
 class CampusNestApp extends StatelessWidget {
@@ -117,15 +118,13 @@ class _ProfileGateState extends State<_ProfileGate> {
         // Role comes only from Firestore. Legacy 'student' maps to resident.
         final role = UserRole.fromValue(raw);
         if (role == UserRole.admin) return const AdminDashboardScreen();
-        if (role == UserRole.owner) {
-          return const _HomePlaceholder(title: 'Owner dashboard coming soon');
-        }
+        if (role == UserRole.owner) return const OwnerDashboardScreen();
         if (role == UserRole.messProvider) {
           return const _HomePlaceholder(
             title: 'Mess provider dashboard coming soon',
           );
         }
-        return const StudentShell(); // resident (and any unknown value)
+        return const ResidentShell(); // resident (and any unknown value)
       },
     );
   }

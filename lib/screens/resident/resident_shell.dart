@@ -7,14 +7,14 @@ import '../../widgets/primary_button.dart';
 import 'hostel_search_screen.dart';
 
 /// Student app frame: bottom navigation with Search / Mess / Bookings / Profile.
-class StudentShell extends StatefulWidget {
-  const StudentShell({super.key});
+class ResidentShell extends StatefulWidget {
+  const ResidentShell({super.key});
 
   @override
-  State<StudentShell> createState() => _StudentShellState();
+  State<ResidentShell> createState() => _ResidentShellState();
 }
 
-class _StudentShellState extends State<StudentShell> {
+class _ResidentShellState extends State<ResidentShell> {
   int _index = 0;
 
   static const _items = [
